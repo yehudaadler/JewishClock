@@ -1,0 +1,8 @@
+Future features:
+----------------
+- show current location
+- allow to manually choose a location
+- refresh current location button
+- show current hebrew date
+- set alarms according to Shaot Zemaniyot
+- turn into a widget / Android watch app
