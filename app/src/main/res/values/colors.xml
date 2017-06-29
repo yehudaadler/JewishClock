@@ -3,6 +3,6 @@
     <color name="clock_red">#FFFF0000</color>
     <color name="clock_12">#FFE67300</color>
     <color name="clock_white">#FFFFFFFF</color>
-    <color name="clock_dark_gray">#AF000000</color>
+    <color name="clock_dark_gray">#FF4B4B4B</color>
     <color name="white">#ffffffff</color>
 </resources>

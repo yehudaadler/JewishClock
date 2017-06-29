@@ -23,12 +23,30 @@ public class ClockView extends View {
     private float mCenterX;
     private float mCenterY;
     private float mScale;
+    private boolean mIsHideSeconds;
 
     private AnglesComputer.Angles mAngles;
 
+    public ClockView(Context context) {
+        super(context);
+        init();
+    }
+
     public ClockView(Context context, AttributeSet attrs) {
         super(context, attrs);
+        init();
+    }
 
+    public ClockView(Context context, AttributeSet attrs, int defStyleAttr) {
+        super(context, attrs, defStyleAttr);
+        init();
+    }
+
+    public void hideSeconds() {
+        mIsHideSeconds = true;
+    }
+
+    private void init() {
         mAngles = AnglesComputer.getInitAngles();
     }
 
@@ -60,7 +78,10 @@ public class ClockView extends View {
 
         drawHoursDial(mAngles.getHoursDialAngle());
         drawMinutesDial(mAngles.getMinutesDialAngle());
-        drawSecondsDial(mAngles.getSecondsDialAngle());
+
+        if (!mIsHideSeconds) {
+            drawSecondsDial(mAngles.getSecondsDialAngle());
+        }
 
         drawSmallCircle();
     }
